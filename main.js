@@ -39,14 +39,14 @@ const horizontalWin = () => {
     (board[1][0] === 'X' && board[1][1] === 'X' && board[1][2] === 'X') ||
     (board[2][0] === 'X' && board[2][1] === 'X' && board[2][2] === 'X')
   ) {
-    console.log('X Wins!');
+    // console.log('X Wins!');
     return true;
   } else if (
-    (board[0][0] === 'Y' && board[0][1] === 'Y' && board[0][2] === 'Y') ||
-    (board[1][0] === 'Y' && board[1][1] === 'Y' && board[1][2] === 'Y') ||
-    (board[2][0] === 'Y' && board[2][1] === 'Y' && board[2][2] === 'Y')
+    (board[0][0] === 'O' && board[0][1] === 'O' && board[0][2] === 'O') ||
+    (board[1][0] === 'O' && board[1][1] === 'O' && board[1][2] === 'O') ||
+    (board[2][0] === 'O' && board[2][1] === 'O' && board[2][2] === 'O')
   ) {
-    console.log('Y Wins!');
+    // console.log('Y Wins!');
     return true;
   }
 };
@@ -58,14 +58,14 @@ const verticalWin = () => {
     (board[0][1] === 'X' && board[1][1] === 'X' && board[2][1] === 'X') ||
     (board[0][2] === 'X' && board[1][2] === 'X' && board[2][2] === 'X')
   ) {
-    console.log('X Wins!');
+    // console.log('X Wins!');
     return true;
   } else if (
-    (board[0][0] === 'Y' && board[1][0] === 'Y' && board[2][0] === 'Y') ||
-    (board[0][1] === 'Y' && board[1][1] === 'Y' && board[2][1] === 'Y') ||
-    (board[0][2] === 'Y' && board[1][2] === 'Y' && board[2][2] === 'Y')
+    (board[0][0] === 'O' && board[1][0] === 'O' && board[2][0] === 'O') ||
+    (board[0][1] === 'O' && board[1][1] === 'O' && board[2][1] === 'O') ||
+    (board[0][2] === 'O' && board[1][2] === 'O' && board[2][2] === 'O')
   ) {
-    console.log('Y Wins!');
+    // console.log('O Wins!');
     return true;
   }
 };
@@ -76,23 +76,35 @@ const diagonalWin = () => {
     (board[0][0] === 'X' && board[1][1] === 'X' && board[2][2] === 'X') ||
     (board[0][2] === 'X' && board[1][1] === 'X' && board[2][0] === 'X')
   ) {
-    console.log('X Wins!');
+    // console.log('X Wins!');
     return true;
   } else if (
-    (board[0][0] === 'Y' && board[1][1] === 'Y' && board[2][2] === 'Y') ||
-    (board[0][2] === 'Y' && board[1][1] === 'Y' && board[2][0] === 'Y')
+    (board[0][0] === 'O' && board[1][1] === 'O' && board[2][2] === 'O') ||
+    (board[0][2] === 'O' && board[1][1] === 'O' && board[2][0] === 'O')
   ) {
-    console.log('Y Wins!');
+    // console.log('O Wins!');
     return true;
   }
 };
 
 const checkForWin = () => {
   //% Your code here call each of the check for types of wins
-  horizontalWin();
-  verticalWin();
-  diagonalWin();
-  return true;
+  if (horizontalWin()) {
+    console.log(
+      `${playerTurn === 'X' ? (playerTurn = '0') : (playerTurn = 'X')} Wins!`
+    );
+    return true;
+  } else if (verticalWin()) {
+    console.log(
+      `${playerTurn === 'X' ? (playerTurn = '0') : (playerTurn = 'X')} Wins!`
+    );
+    return true;
+  } else if (diagonalWin()) {
+    console.log(
+      `${playerTurn === 'X' ? (playerTurn = '0') : (playerTurn = 'X')} Wins!`
+    );
+    return true;
+  }
 };
 
 const ticTacToe = (row, column) => {
