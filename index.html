@@ -1,42 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Tic Tac Toe</title>
-    <!--bootstrap & style links -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="tictactoe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fcdf8cb6f3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="tictactoe.css" />
     <!-- link to JavaScript code -->
     <script src="dom-tictactoe.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Welcome to Tic Tac Toe</h1>
-        <p>Get ready to play!</p>
+        <h1>Let's Play Tic Tac Toe</h1>
+        <!-- <p>Get ready to play!</p> -->
         <!-- uses the built-in onclick attribute to call the resetBoard function -->
-        <button onclick="resetBoard()" type="button" class="btn btn-primary btn-lg" name="button">Restart</button>
+        <button
+          onclick="resetBoard()"
+          type="button"
+          class="btn btn-primary btn-lg"
+          name="button"
+        >
+          <i class="fa-solid fa-arrow-rotate-right fa-spin"></i>
+        </button>
+        <p class="player-turn">Active Player: Player X</p>
       </div>
 
       <table align="center">
         <tr>
           <!-- Each table-data (td) has an id that matches it's position in the array or arrays [0][1] -->
-          <td id='0-0' onclick="handleClick(this)" ></td>
-          <td id='0-1' onclick="handleClick(this)" ></td>
-          <td id='0-2' onclick="handleClick(this)" ></td>
+          <td id="0-0" onclick="handleClick(this)"></td>
+          <td id="0-1" onclick="handleClick(this)"></td>
+          <td id="0-2" onclick="handleClick(this)"></td>
         </tr>
         <tr>
           <!-- onclick calls a function called handleClick and passes itself to it("this") -->
-          <td id='1-0' onclick="handleClick(this)" ></td>
-          <td id='1-1' onclick="handleClick(this)" ></td>
-          <td id='1-2' onclick="handleClick(this)" ></td>
+          <td id="1-0" onclick="handleClick(this)"></td>
+          <td id="1-1" onclick="handleClick(this)"></td>
+          <td id="1-2" onclick="handleClick(this)"></td>
         </tr>
         <tr>
-          <td id='2-0' onclick="handleClick(this)" ></td>
-          <td id='2-1' onclick="handleClick(this)" ></td>
-          <td id='2-2' onclick="handleClick(this)" ></td>
+          <td id="2-0" onclick="handleClick(this)"></td>
+          <td id="2-1" onclick="handleClick(this)"></td>
+          <td id="2-2" onclick="handleClick(this)"></td>
         </tr>
       </table>
+      <div class="score">
+        <div class="player-x">
+          <h5>Player X:</h5>
+          <p class="player-x-score">0</p>
+        </div>
+        <div class="tie-game">
+          <h5>Tie Game:</h5>
+          <p class="tie-game-score">0</p>
+        </div>
+        <div class="player-o">
+          <h5>Player O:</h5>
+          <p class="player-o-score">0</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

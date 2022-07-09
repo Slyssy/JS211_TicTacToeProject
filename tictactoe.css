@@ -1,7 +1,126 @@
-td{
-  height:150px;
-  width:150px;
+body {
+  background-color: #1a2a33;
+  font-family: 'Outfit', sans-serif;
+}
+
+.jumbotron {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.jumbotron h1 {
+  color: #f2b137;
+}
+
+button {
+  height: 3em;
+  width: 6em;
+  background-color: #31c3bd;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  box-shadow: inset 0px -8px 0px #10212a;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(1);
+}
+.jumbotron p {
+  color: #f2b137;
+  font-size: 20px;
+}
+
+td {
+  height: 150px;
+  width: 150px;
   text-align: center;
-  border: 5px solid black;
+  border: 10px solid #1a2a33;
+  box-shadow: inset 0px -8px 0px #10212a;
+  background-color: #1f3641;
   font-size: 100px;
+  /* border-radius: 20px; */
+}
+
+/* .player-turn {
+  text-align: center;
+  color: #f2b137;
+  font-size: 20px;
+} */
+
+.score {
+  width: 490px;
+  margin: 2em auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.player-x {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  color: #31c3bd;
+  background-color: #1f3641;
+  padding: 0.75em;
+  border-radius: 10px;
+}
+
+.player-o {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  color: #f2b137;
+  justify-content: flex-end;
+  background-color: #1f3641;
+  padding: 0.75em;
+  border-radius: 10px;
+}
+
+.tie-game {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  color: gray;
+  justify-content: flex-end;
+  background-color: #1f3641;
+  padding: 0.75em;
+  border-radius: 10px;
+}
+
+.player-x h5 {
+  margin: 0;
+}
+
+.player-o h5 {
+  margin: 0;
+}
+
+.player-x-score {
+  margin: 0;
+}
+
+.player-o-score {
+  margin: 0;
+}
+
+.tie-game h5 {
+  margin: 0;
+}
+
+.tie-game-score {
+  margin: 0;
 }

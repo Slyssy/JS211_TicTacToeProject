@@ -115,7 +115,6 @@ const ticTacToe = (row, column) => {
   } else if (playerTurn === 'O') {
     playerTurn = 'X';
   }
-
   //Todo: then check for a win
   checkForWin();
 };
