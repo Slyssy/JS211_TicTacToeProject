@@ -17,7 +17,7 @@ body {
 }
 
 button {
-  height: 3em;
+  height: 3.5em;
   width: 6em;
   background-color: #31c3bd;
   transition: transform 0.2s ease;
@@ -25,7 +25,6 @@ button {
   border: none;
   border-radius: 5px;
   padding: 0.5em;
-  box-shadow: inset 0px -8px 0px #10212a;
 }
 
 button:hover {
