@@ -75,7 +75,7 @@ const checkForWin = () => {
     // **BONUS** you could make the dismissal of this alert window reset the
     // board...
 
-    window.alert(`Player ${currentMarker} won!`);
+    window.alert(`Player ${currentMarker} wins the game!`);
   } else if (
     (!horizontalWin() && allSquaresFull) ||
     (!verticalWin() && allSquaresFull) ||
